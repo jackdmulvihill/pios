@@ -15,11 +15,13 @@ void kernel_main() {
     bssend = &__bss_end; // 0x83000
 
     /* write a for loop that sets all of the memory values to zero between the boundaries of bss start and end */
-    for (char *ptr = bssstart; ptr < bssend; ptr++) {
+    for (int i = *bssstart; i < *bssend; i++) {
          /* Set the value of all bss pointers to zero */
+         int *ptr = &i;
          *ptr = 0;
     }
 
     while(1){
     }
+    get_timer_count();
 }
