@@ -1,7 +1,5 @@
 // Jack Mulvihill
 
-#include <stdio.h>
-
 /**
 * This is a simple class that contains a method to add and remove elements
 * from a singly-linked list.
