@@ -2,7 +2,10 @@
 
 char glbl[128];
 
-int t = get_timer_count();
+unsigned long get_timer_count() {
+    unsigned long *timer_count_register = 0x3f003004;
+    return *timer_count_register;
+}
 
 void kernel_main() {
 
@@ -22,4 +25,5 @@ void kernel_main() {
 
     while(1){
     }
+    esp_printf(putc, "Current Execution Level is %d\r\n", getEL());
 } // method kernel_main
