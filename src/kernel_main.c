@@ -26,4 +26,5 @@ void kernel_main() {
     while(1){
     }
     esp_printf(putc, "Current Execution Level is %d\r\n", getEL());
+    mmu_on();
 } // method kernel_main
